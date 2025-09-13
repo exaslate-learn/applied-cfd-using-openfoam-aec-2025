@@ -33,8 +33,7 @@ T_numerical = T_initial;
 T_numerical(1, 1) = T_left;  %(i, 1) --> i = 1 % Dirichlet boundary condition
 
 % Right boundary condition
-%T_numerical(n, 1) = T_right; %- Dirichlet bounday condition  %(n, 1) --> i = n
-T_numerical(n, 1) = T_numerical(n-1, 1); %% dT/dx = 0 (Neumann - adiabatic condition)
+T_numerical(n, 1) = T_right; %- Dirichlet bounday condition  %(n, 1) --> i = n
 
 count = 1;  % at step 1
 %count = 2;  % at step 2
@@ -68,3 +67,4 @@ for t = t_initial : dt : t_final
 
   pause(0.01);
 end
+
